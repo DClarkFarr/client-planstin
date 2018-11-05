@@ -1,0 +1,1413 @@
+/*  Color Theme */
+
+/* Login Footer Background */
+.bg-gray-4 {
+    background: #1A1A1A;
+}
+.text-gray-4 {
+    color: #1A1A1A;
+}
+
+/* Login Body Background */
+
+.bg-gray-3 {
+    background: #707070;
+}
+.text-gray-3 {
+    color: #707070;
+}
+
+.bg-gray-2 {
+    background: #757575;
+}
+.text-gray-2 {
+    color: #757575;
+}
+
+.bg-gray-1 {
+    background: #A2A2A2;
+}
+.text-gray-1 {
+    color: #A2A2A2;
+}
+
+.bg-black {
+    background: #000000;
+}
+.text-black {
+    color: #000000;
+}
+
+.bg-white {
+    background: #FFFFFF;
+}
+.text-white {
+    color: #FFFFFF;
+}
+
+.bg-red {
+    background: #E50D0D;
+}
+.text-red {
+    color: #E50D0D!important;
+}
+
+.bg-red-dark {
+    background: #AE2727;
+}
+.text-red-dark {
+    color: #AE2727;
+}
+.bg-head-gray{
+    background: #95989A;
+}
+.text-right{
+    text-align: right;
+}
+
+.bg-sidebar{
+    background: #cbcbcb;
+}
+
+/* General Layout Styling */
+body {
+    font-family: Roboto;
+    font-weight: 400;
+    background: #fff!important;
+}
+
+/* Main Body Layout Styling */
+.body-main #container,
+.body-main #container > .d-flex {
+    min-height: 500px;
+    min-height: calc(100vh - 120px);
+}
+
+@media(min-width: 992px){
+    .body-main .sidebar {
+        width: 400px;
+    }
+}
+
+/* Login Body Layout Styling */
+.body-login footer .logo-wrapper {
+    width: 300px;
+}
+.body-login .footer-bottom {
+    border-top: solid 1px #FFF;
+}
+.body-login footer .navbar {
+    padding: 0;
+}
+.body-login #content {
+    min-height: 100%;
+    min-height: 80vh;
+    min-height: calc(100vh - 211px);
+}
+
+
+/*saikat*/
+
+.no-mgr-top{
+    margin-top: 0px!important;
+}
+
+.no-mgr-bottom{
+    margin-bottom: 0px!important;
+}
+
+
+/*All fonts*/
+@font-face {
+    font-family: CharlevoixPro-M;
+    src:url(../fonts/CharlevoixPro/CharlevoixPro-Medium.otf);
+}
+
+@font-face {
+    font-family: bahnschrift-r;
+    src:url(../fonts/bahnschrift/bahnschrift.ttf);
+}
+
+@font-face {
+    font-family: BasicSans-l;
+    src:url(../fonts/BasicSans/OpenSans-Light.ttf);
+}
+
+@font-face {
+    font-family: OpenSans-r;
+    src:url(../fonts/OpenSans/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-r;
+    src:url(../fonts/Montserrat/Montserrat-Regular.otf);
+}
+
+@font-face {
+    font-family: Roboto-r;
+    src:url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: Roboto-m;
+    src:url(../fonts/Roboto/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: Roboto-b;
+    src:url(../fonts/Roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: Roboto-l;
+    src:url(../fonts/Roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: sfui-r;
+    src:url(../fonts/SFUI/sf-ui-text-regular-58646b56a688c.otf);
+}
+
+@font-face {
+    font-family: SEGOEUI-r;
+    src:url(../fonts/SEGOEUI/SEGOEUI.TTF);
+}
+
+@font-face {
+    font-family: Arial-r;
+    src:url(../fonts/Arial/Arialregular.ttf);
+}
+@font-face {
+    font-family: Raleway-semi;
+    src:url(../fonts/raleway/Raleway-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Gotham-b;
+    src:url(../fonts/Gotham/GothamBold.ttf);
+}
+
+@font-face {
+    font-family: Gotham-m;
+    src:url(../fonts/Gotham/GothamMedium.ttf);
+}
+
+
+
+
+/*head navbar*/
+.navbar li a{
+    color: #fff;
+    font-family: CharlevoixPro-M;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.head-logo{
+    max-width: 230px;
+}
+.navbar-collapse {
+    /*! flex-grow: 0!important; */
+}
+/*Login body*/
+.login-container{
+    max-width: 771px !important;
+    margin-top: 40px;
+}
+.cmpny-text{
+    font-family: bahnschrift-r;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.login-input-label{
+    font-family:BasicSans-l;
+    font-size: 17px;
+}
+.login-body input{
+    color: #161514;
+    font-size: 15px;
+    font-family: OpenSans-r;
+}
+.login-field{
+    max-width: 350px!important;
+}
+.btn-submit{
+    font-family: Montserrat-r;
+    font-size: 22px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 30px;
+}
+.forgot-pass{
+    font-family: BasicSans-l;
+    font-size: 17px;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.text-muted{
+    font-size: 14px;
+    font-family: OpenSans-r;
+    margin-bottom: -15px;
+}
+
+/*FOOTER CSS*/
+.footer-text{
+    font-family: Roboto-l;
+    font-size: 14px;
+    text-align: center;
+}
+footer{
+    width: 100%;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -50px;
+}
+
+.push {
+  height: 100px;
+}
+
+
+
+.navbar-toggler{
+    background: #fff;
+}
+.navbar-toggler span{
+    color: #000!important;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+}
+.navbar-toggler {
+    padding: .25rem .5rem;
+}
+
+/* forgot page css*/
+.recovery-text{
+    font-family: BasicSans-l;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+.pass-r-m-b{
+    margin-bottom: 25px;
+}
+.register-field{
+    max-width: 420px!important;
+}
+.btn-regis{
+    float: right;
+    font-size: 20px;
+    padding: 6px 30px
+}
+.terms{
+    font-family: BasicSans-l;
+    font-size: 12px;
+    margin-left: 5px;
+}
+.input-detal{
+    font-family: SEGOEUI-r;
+}
+
+/*admin busiines profile*/
+.border-btm{
+    position: relative;
+}
+.border-btm .navbar-collapse {
+    flex-grow: 0 !important;
+}
+.border-btm::after{
+    position: absolute;
+    bottom: 1px;
+    left: 14px;
+    width: 97%;
+    height: 4px;
+    background: #b6b6b6;
+    content: '';
+}
+.fa-home, .fa-sign-out{
+    font-size: 26px;
+    margin-top: 15px;
+}
+.busi-p-cre-head{
+    font-family: bahnschrift-r;
+    font-size: 30px;
+    margin-top: 30px;
+}
+.user-data{
+    width: 100%;
+}
+.data-input-label{
+    font-family: sfui-r;
+    font-size: 16px;
+    margin-bottom: -5px;
+    display: block;
+}
+
+
+.input-detail{
+    font-family: SEGOEUI-r;
+    font-size: 12px;
+}
+.user-data .col-md-6{
+    float: left;
+}
+.fa-upload{
+    margin-right: 5px;
+    font-size: 18px;
+}
+.up-img{
+    font-family: Roboto-r;
+    font-size: 16px;
+    color: #95989A;
+}
+.img-upload{
+    border: 1px solid #d4d4d4;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.b-addr{
+    margin-bottom: 40px;
+}
+.mgr-b{
+    margin-bottom: 7px;
+}
+.isBilling{
+    font-family: SEGOEUI-r;
+    font-size: 22px;
+    
+}
+.rdo1{
+    margin-top: 0px;
+    margin-right: 5px;
+}
+.rdo1 span{
+    margin-left: 20px;
+    font-family: SEGOEUI-r;
+    margin-right: 20px;
+    font-size: 18px;
+}
+.payMetod{
+    font-family: SEGOEUI-r;
+    font-size: 24px;
+    margin-top: 20px;
+}
+.checkPayMethod{
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+}
+.checkPayMethod li{
+    float: left;
+    margin-left: 30px;
+    list-style: none;
+}
+.checkPayMethod span{
+    margin-left: 10px;
+    float: right;
+    margin-top: 3px;
+}
+.checkPayMethod .check{
+    float: left;
+}
+.checkPayMethod li:first-child{
+    margin-left: 0px;
+}
+.btn-save{
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+
+/*select company benefit page*/
+
+.benefit-title{
+    font-size: 28px;
+    font-family: bahnschrift-r;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.rotate {
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+ .faq li.q{
+    font-family: Arial-r;
+    text-align: center;
+    font-weight: bold;
+     margin-top: 20px;
+}
+.arrow-rotate{
+    margin-top: -10px;
+    float: right;
+    width: 45.5px;
+    height: 45.5px;
+    padding: 8px 8px 8px 8px;
+    background: #F39595;
+}
+.plan-title{
+    font-family: Bahnschrift-r;
+    font-size: 20px;
+}
+.outline-down:hover{
+    color: #707070;
+    text-decoration: none;
+}
+.outline-down{
+    color: #707070;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: SEGOEUI-r;
+}
+.outline-down span{
+    margin-left: 5px;
+}
+.emp-rate{
+    color: #076510;
+    font-family: Bahnschrift-r;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+.plans li{
+    list-style: none;
+    border-bottom: 1px solid #707070;
+}
+.plans li{
+    
+}
+.plan-check{
+    margin-top: -5px;
+}
+.btn-done{
+    float: right;
+    background: #076510;
+    border: none;
+    font-family: Arial-r;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 3px 35px 3px 35px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/*your services*/
+.service-head{
+    font-family: SEGOEUI-r;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+.service-para{
+    font-family: SEGOEUI-r;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 0px;
+}
+.service-para{
+    margin-bottom: 5px;
+}
+.service-selector{
+   text-align: center;
+}
+.Select-txt{
+    font-family: Arial-r;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    max-width: 140px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-bottom: 20px;
+}
+.add-m-txt{
+    font-size: 18px;
+    margin-top: 20px;
+    line-height: 25px;
+}
+.add-user{
+    margin-top: 30px;
+}
+.add-user label{
+    margin-bottom: 5px;
+}
+
+/*payroll agree*/
+.payroll-agree{
+    border: 1px solid #707070;
+    width: 100%;
+    height: 700px;
+    margin-bottom: 10px;;
+}
+.agree-check{
+    font-size: 14px;
+    margin-left: 10px;
+    font-family: BasicSans-l;
+}
+
+.add-member-list{
+    margin: 0;
+    padding: 0;
+}
+.add-member-list li{
+    list-style: none;
+}
+.add-more-btn{
+    backface-visibility: none;
+    border: 0;
+}
+
+/*sidebar*/
+.sidebar{
+    padding: 10px 10px;
+    height: 500px;
+}
+.sidebar .profile-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 139px;
+    transform: translate(-50%,-50%);
+   
+}
+.edit-pro{
+    font-size: 15px;
+    font-family: BasicSans-l;
+    font-weight: bold;
+    margin-top: 40px;
+    display: block;
+}
+.edit-pro span{
+    margin-left: 10px;
+}
+.edit-pro i{
+    margin-left: 15px;
+    font-size: 19px;
+}
+.secure-m img{
+    width: 22px;
+    margin-left: 15px;
+}
+
+.edit-pro:hover .fa-pencil-square-o{
+    color: #000;
+}
+
+/*sidebar right body*/
+.side-bra-smi-h3{
+    color: #080808;
+    font-family: SEGOEUI-r;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.disply-inline{
+    display: inline;
+}
+.edit-benefit{
+    color: #080808;
+    font-size: 20px;
+    margin-left: 5px;
+}
+.fa-pencil-square-o:hover{
+    color: #000;
+}
+.befit-item{
+    font-weight: bold;
+    font-size: 18px;
+    font-family: SEGOEUI-r;
+    margin-bottom: 0px;
+}
+.mgr-t-c{
+    margin-top: 10px;
+}
+.befit-item span{
+    font-family: SEGOEUI-r;
+    font-size: 16px;
+    font-weight: normal;
+    
+}
+
+.go-srtp-3{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.ok-icon{
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 90px;
+}
+.success-text{
+    font-family: SEGOEUI-r;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    
+}
+
+.step-btn a{
+    border: 0;
+    font-family: Arial-r;
+}
+.step-btn{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.seo-p{
+    font-family: ;
+}
+.add-more-btn{
+    cursor: pointer;
+    font-family: BasicSans-l;
+    background: none;
+    color: #263DCC;
+    font-weight: bold;
+    font-size: 18px;
+}
+.add-more-btn i{
+    padding: 8px 9px 6px 9px;
+    background: #263DCC;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+.mgr-r{
+    margin-right: 15px;
+}
+
+.emp-name{
+    font-family: sfui-r;
+    font-size: 22px;
+    color: #5e6164;
+    margin-bottom: 0px;
+}
+.emp-email{
+    font-family: sfui-r;
+    color: #8C8C8C;
+    font-size: 14px;
+}
+.well-done-text{
+    text-align: center;
+    font-size: 32px;
+    line-height: 38px;
+    margin-top: 0;
+}
+.well-done-step{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 22px;
+    padding-bottom: 80px;
+}
+.well-done-img{
+   display: block;
+    margin: 0 auto;
+}
+
+/*dashboard*/
+.welcome-msg{
+    font-family: Raleway-semi;
+    color: #080808;
+    font-size: 28px;
+    margin-bottom: 80px;;
+}
+.dashboard-link{
+    font-family: Gotham-b;
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding: 22px 30px;
+    border-radius: 8px;
+    width: 206px;
+    display: block;
+    
+    background-image: -ms-linear-gradient(top, #E5E4E4 0%, #C7C7C7 100%);
+
+background-image: -moz-linear-gradient(top, #E5E4E4 0%, #C7C7C7 100%);
+
+background-image: -o-linear-gradient(top, #E5E4E4 0%, #C7C7C7 100%);
+
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E5E4E4), color-stop(100, #C7C7C7));
+
+background-image: -webkit-linear-gradient(top, #E5E4E4 0%, #C7C7C7 100%);
+
+background-image: linear-gradient(to bottom, #E5E4E4 0%, #C7C7C7 100%);
+    
+}
+.dashboard-link i{
+    margin-right: 10px;
+    font-size: 20px;
+}
+.dashboard-link:hover{
+    text-decoration: none;
+}
+.mgrt-3{
+    margin-top: 70px;
+}
+.pro-img-container{
+    background: #e4e4e4;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.img-cir{
+    text-align: center;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+
+}
+.p-name{
+    font-family: Raleway-semi;
+    color: #080808;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+.p-title{
+    font-family: BasicSans-l;;
+    font-weight: normal;
+    font-size: 14px;
+    color: #2779ff;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.company-table{
+    margin-top: 40px;
+    border: 0;
+    max-width: 600px;
+}
+.company-table td{
+    border-right: 0;
+    padding: 0;
+    padding-top: 20px;
+}
+.company-table th{
+    border-left: 0px;
+    padding: 0;
+    padding-top: 20px;
+}
+.company-title{
+    font-family: SEGOEUI-r;
+    font-size: 14px;
+    color: #000;
+    font-weight: normal;
+    margin-bottom: 0px;
+}
+
+.company-detail{
+    font-family: SEGOEUI-r;
+    font-size: 13px;
+    color: #818181;
+    font-weight: normal;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+.benefit-head{
+    font-family: SEGOEUI-r;
+    font-size: 16px;
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 0;
+    margin-top: 5px; 
+}
+
+.benefit-detial{
+    text-align: left;
+    font-size: 14px;
+   
+}
+.benefit-table{
+    margin-top: 20px;
+    max-width: 600px;
+    border: 0;
+}
+.benefit-table th{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+.benefit-table tr td:first-child{
+    border-left: 0;
+}
+.benefit-table tr td:last-child{
+    border-right: 0;
+}
+.benefit-table tr td{
+    padding-bottom: 30px;
+}
+.benefit-mgr{
+    margin-bottom: 30px;
+}
+.footer-btm{
+    margin-bottom: 60px;
+}
+.emp-pic .img-cir img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    transform: translate(-50%,-50%);
+}
+.emp-pic .img-cir{
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+.emp-pic{
+    float: left;
+    margin-right: 10px;
+    width: 20%;
+}
+.emp-table .benefit-head{
+    font-size: 16px;
+    font-weight: bold;
+    color: #818181;
+}
+.emp-n-name{
+    font-family: SEGOEUI-r;
+    font-size: 15px;
+    margin-bottom: 0px;
+    margin-top: 7px;
+}
+.emp-email-m{
+    word-break: break-all;
+    margin-left: 0;
+    line-height: 15px;
+}
+.emp-detail-r{
+    float: left;
+    width: 75%;
+}
+
+
+.emp-table tr td{
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.emp-col{
+    line-height: 18px;
+    margin-top: 5px;
+}
+
+.emp-table td{
+    border-left: 0;
+    border-right: 0;
+}
+.emp-delete{
+    background: none;
+    border: 0;
+    cursor: pointer;
+    color: #818181;
+    margin-left: 12px;
+    float: left;
+    outline: 0;
+}
+.emp-edit{
+     background: none;
+    border: 0;
+    cursor: pointer;
+    color: #818181;
+    margin-left: 20px;
+    float: left;
+    outline: 0;
+    margin-top: 1px;
+}
+
+.emp-delete:hover{
+    color: #E50D0D;
+}
+.emp-edit:hover{
+    color: #000;
+}
+
+
+.billing .card{
+     margin-top: 20px;
+    color: #fff;
+}
+.footer-mgr{
+    margin-bottom: 60px;
+}
+
+.b-plans li{
+    list-style: none;
+    font-family: Roboto-r;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.bill-amount{
+    font-family: Roboto-b;
+    text-align: center;
+}
+.bill-date{
+    font-family: Roboto-r;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.bill-pay{
+    font-family: Roboto-l;
+    font-size: 12px;
+    text-transform: uppercase;
+    background: #fff;
+    color: #080808;
+    border: 0;
+    border-color: none;
+    box-shadow: 32px 30px 114px #000;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.pay-process{
+    margin-top: 30px;
+}
+.billing .card{
+    min-height: 192px;
+    overflow: hidden;
+}
+.pay-process-2{
+    margin-top: 54px;
+}
+.invoice-icon{
+    width: 40px;
+    margin-right: 10px;
+}
+.invoice-list{
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.invoice-list li{
+    list-style: none;
+    float: left;
+    margin-right: 56px;
+}
+.invoice-list li a span{
+    text-align: center;
+    font-family: Bahnschrift-r;
+    font-weight: bold;
+    display: block;
+    font-size: 19px;
+    margin-top: 6px;
+}
+.pdf-img{
+    width: 60px;
+}
+.invoice-list li:first-child{
+    margin-left: 0;
+}
+.next-img{
+    width: 50px;
+    margin-top: 27px;
+}
+.invoice-list{
+    margin-bottom: 40px;
+}
+.paument-type-edit{
+    font-family: CharlevoixPro-M;
+    font-size: 16px;
+    margin-left: 52px;
+    margin-top: 10px;
+    display: block;
+}
+.paument-type-edit span{
+    margin-right: 10px;
+}
+
+.account-info{
+    margin: 0;
+    padding: 0;
+    max-width: 300px;
+    margin-left: 52px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.account-info li{
+    list-style: none;
+    font-family: font-family: sfui-r;
+    font-size: 14px;
+    color: #777777;
+}
+.account-info li p{
+    margin-bottom: 0;
+}
+.bill-pay-method{
+    margin-left: 52px;
+}
+
+.documents li a span{
+    font-weight: normal;
+    font-size: 16px;
+}
+.documents{
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+.upload-doc{
+    background: none;
+    border: 0;
+    font-family: OpenSans-r;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.upload-doc span{
+    color: #263DCC;
+    margin-left: 10px;
+}
+
+.settings-table tr td{
+    border-top: 0;
+    padding-left: 0;
+    padding-top: 0;
+}
+.settings-table{
+    margin-top: 0;
+}
+.settings-table .emp-n-name{
+    font-weight: bold;
+    font-size: 18px;
+}
+.settings-table .emp-email-m{
+    font-size: 12px;
+}
+.settings-table i{
+    font-size: 20px;
+    margin-top: 14px;
+}
+.settings-table{
+    margin-top: 30px;
+}
+.settings-field{
+    margin-top: 30px;
+    max-width: 280px!important;
+}
+
+.settings-field input::placeholder{
+    font-family: BasicSans-r;
+    color: #6a6a6a;
+    font-size: 14px;
+}
+.field-edit{
+    position: relative;
+}
+.field-edit i{
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    color: #000;
+    font-size: 20px;
+}
+.field-edit i:hover{
+    color: #000;
+}
+.settings-field input{
+    padding-right: 35px;
+}
+.settings-save-btn{
+    font-family: OpenSans-r;
+    font-weight: bold;
+    float: right;
+    padding: 5px 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.vertical-bdr{
+    position: relative;
+}
+.vertical-bdr::after{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 1px;
+    height: 100%;
+    background: #707070;
+    content: '';
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -50px;
+}
+
+.image-uploader{
+    max-width: 250px!important;
+    margin: 0 auto;
+    display: block;
+}
+
+.up-img{
+    float: left;
+    font-size: 19px;
+}
+.up-text{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.up-plus{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+
+
+#upload{
+    display:none
+}
+
+.ok-confirm{
+    width: 48px;
+}
+.confirm-added{
+    font-family: SEGOEUI-r;
+    font-size: 16px;
+}
+.confirm-added span{
+    margin-left: 5px;
+}
+
+.add-emp-btn-page{
+    float: right;
+    border: 0;
+    font-family: OpenSans-r;
+    font-size: 12px;
+    padding: 7px 20px;
+}
+
+.reveiw-table .benefit-head{
+    margin-left: 0;
+}
+
+.reveiw-table .emp-delete{
+    margin-left: 4px;
+}
+
+.mgr-l-review{
+    margin-left: 15px;
+}
+.step-btn-1{
+    float: right;
+}
+.text-red:hover{
+    text-decoration: none;
+}
+
+
+
+
+
+/*all media*/
+
+
+
+
+@media(max-width: 767px){
+    .head-logo {
+    max-width: 198px;
+    }
+    .banner-img{
+        margin: 0 auto!important;
+        display: block!important;
+    }
+    .login-field{
+        margin: 0 auto;
+        display: block;
+    }
+    .cmpny-tex{
+        margin-top: 50px;
+    }
+    .navbar li a{
+        font-size: 14px;
+    }
+    b-addr{
+    margin-top: 30px;
+    }
+    .plan-title {
+        text-align: center;
+    }
+    .outline-down{
+        text-align: center;
+        display: block;
+    }
+    .emp-rate{
+        text-align: center;
+    }
+    .plan-check{
+        text-align: center;
+    }
+    .Select-txt{
+        margin-top: 15px;
+    }
+    .sidebar{
+    margin-top: 30px;
+        height: 400px;
+        margin-bottom: 40px;
+    }
+    .go-srtp-3{
+        margin-top: 40px;
+        margin-bottom: 0px;
+    }
+    .sidebar .profile-img{
+       margin-left: 0;
+        margin-right: 0;
+    }
+    .well-done-img{
+        display: block;
+        margin: 0 auto!important;
+        float: none;
+        width: 110px;
+    }
+    .dashboard-link{
+        margin: 0 auto;
+    }
+    .mgrt-3{
+        margin-top: 0px;
+        margin-bottom: 40px;
+    }
+    .welcome-msg{
+        text-align: center;
+    }
+    .company-table{
+        margin-bottom: 60px;
+    }
+    .emp-sec{
+    overflow-x: scroll;
+    }
+    .add-emp-m{
+        margin-bottom: 60px;
+    }
+    .vertical-bdr::after{
+        width: 0px;
+    }
+    .settings-field{
+        margin-top: 30px;
+    }
+    .well-done-text {
+    text-align: center;
+    font-size: 17px;
+    line-height: 32px;
+    margin-top: 0;
+    }
+    .step-btn-1{
+        float: none;
+    }
+    .well-done-step {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 22px;
+    padding-bottom: 3px;
+    }
+}
+
+
+@media(max-width: 991px){
+    .border-btm::after{
+    position: absolute;
+    bottom: -9px;
+    left: 14px;
+    width: 98%;
+    height: 0px;
+    background: #707070;
+    content: '';
+    }
+    .checkPayMethod li:first-child{
+    margin-left: 30px;
+    }
+    .btm-bdr{
+     display: none;
+    }
+    .invoice-list li {
+    list-style: none;
+    float: left;
+    margin-right: 10px;
+    }
+    .pdf-img {
+    width: 50px;
+    }
+    .next-img {
+
+    width: 27px;
+    margin-top: 16px;
+        margin-left: 10px;
+
+    }
+    .invoice-list li a span {
+    font-size: 14px;
+    margin-top: 6px;
+    }
+}
+
+@media(min-width: 991px){
+    .navbar{
+    height: 90px;
+    }
+    .navbar-right{
+    float: right!important;
+    }
+    /*cuatom conatiner*/
+    .container{
+        max-width: 1024px;
+    }
+    .navbar li{
+    margin-left: 30px;
+    }
+    
+    .btm-bdr{
+    width: 100%;
+    height: 4px;
+    background: #b6b6b6;
+    border-top: 0;
+    }
+}
+
+
+
