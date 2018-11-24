@@ -8,9 +8,11 @@
 
 namespace App\Services\SalesForce;
 
+use App\Entities\OAuthToken;
 use App\Services\SalesForce\ApiCall\RequestAccessToken;
 use App\Services\SalesForce\Dto\RequestAccessTokenDto;
 use App\Services\SalesForce\Dto\RequestRefreshTokenDto;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 
@@ -43,11 +45,20 @@ class SalesForceTokenService
         $this->apiParams = $apiParams;
         $this->requestAccessTokenApiCall = $requestAccessToken;
         $this->entityManager = $entityManager;
+
+        $this->loadAccessToken();
     }
 
-    private function loadAccessToken()
+    private function loadAccessToken(): void
     {
+        /** @var ArrayCollection $tokens */
+        $tokens = new ArrayCollection(
+            $this->entityManager->getRepository(OAuthToken::class)->findAll()
+        );
 
+        if ($token = $tokens->last()) {
+            $this->apiParams->setToken($token);
+        }
     }
 
     /**
@@ -56,7 +67,7 @@ class SalesForceTokenService
      *
      * @return string
      */
-    public function getAuthUrl()
+    public function getAuthUrl(): string
     {
         $format = '%s?response_type=code&client_id=%s&redirect_uri=%s&state=mystate';
 
@@ -98,17 +109,16 @@ class SalesForceTokenService
         return true;
     }
 
-    public function refreshAccessToken($refresh)
+    /**
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     *
+     * @throws \Throwable
+     */
+    public function refreshAccessToken()
     {
-        /**
-         * POST /services/oath2/token HTTP/1.1
-         * Host: login.salesforce.com
-         * Authorization:  Basic client_id=3MVG9lKcPoNINVBIPJjdw1J9LLM82HnFVVX19KY1uA5mu0QqEWhqKpoW3svG3XHrXDiCQjK1mdgAvhCscA9GE&client_secret=1955279925675241571
-         * grant_type=refresh_token&refresh_token=your token here
-         */
         $dto = new RequestRefreshTokenDto(
-            $this->apiParams,
-            'refresh_token'
+            $this->apiParams
         );
 
         try {
@@ -118,13 +128,14 @@ class SalesForceTokenService
                 ->execute();
 
         } catch (\Throwable $exception) {
-
+            throw $exception;
         }
 
+        $this->entityManager->flush();
     }
 
-    private function updateAccessToken()
+    public function revokeAccessToken()
     {
-
+        //@Todo: Revoke token if we need to in the future.
     }
 }

@@ -66,5 +66,7 @@ class SalesForceCreateAccessToken extends Command
                 \dump($exception);
             }
         }
+
+        $this->info('New token has been created!');
     }
 }

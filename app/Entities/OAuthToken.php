@@ -76,6 +76,13 @@ class OAuthToken
         $this->issueDate = new \DateTime();
     }
 
+    public function refresh(array $tokenData)
+    {
+        $this->accessToken = $tokenData['access_token'];
+        $this->instanceUrl = $tokenData['instance_url'];
+        $this->issueDate = new \DateTime();
+    }
+
     /**
      * @return int
      */

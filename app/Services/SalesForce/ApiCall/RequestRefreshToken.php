@@ -15,14 +15,9 @@ use App\Services\SalesForce\SalesForceTokenService;
 
 class RequestRefreshToken extends AbstractRestApiCall
 {
-    public function getHttpMethod(): string
-    {
-        return self::HTTP_METHOD_POST;
-    }
-
     public function getRequestUrl(): string
     {
-        return $this->apiParameters->getApiEndpoint() . SalesForceTokenService::TOKEN_URI;
+        return $this->apiParameters->getAuthEndpoint() . SalesForceTokenService::TOKEN_URI;
     }
 
     protected function getDtoObjectType(): string
@@ -32,6 +27,7 @@ class RequestRefreshToken extends AbstractRestApiCall
 
     protected function prepareRequest(): void
     {
+        $this->addHeader('Accept', self::CONTENT_TYPE_JSON);
         $this->requestBodyType = self::REQUEST_BODY_FORM;
         $this->requestMethod = self::HTTP_METHOD_POST;
     }

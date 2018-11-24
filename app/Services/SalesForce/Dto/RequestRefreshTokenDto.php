@@ -17,41 +17,51 @@ class RequestRefreshTokenDto implements SalesForceDtoInterface
     /**
      * @var string
      */
-    protected $grantType;
+    protected $grantType = 'refresh_token';
 
     /**
      * @var SalesForceApiParameters
      */
-    protected $salesForceApiParams;
+    protected $apiParams;
 
     /**
      * @var stdClass|array
      */
     protected $returnData;
 
-    protected $token;
-
-    public function __construct(
-        SalesForceApiParameters $salesForceApiParams,
-        string $grantType = 'refresh_token'
-    ) {
-        $this->salesForceApiParams = $salesForceApiParams;
-        $this->grantType = $grantType;
+    public function __construct(SalesForceApiParameters $apiParams)
+    {
+        $this->apiParams = $apiParams;
     }
 
     public function toSfObject(): array
     {
         return [
             'grant_type' => $this->grantType,
-            'redirect_uri' => $this->salesForceApiParams->getRedirectUri(),
-            'client_secret' => $this->salesForceApiParams->getClientSecret(),
-            'client_id' => $this->salesForceApiParams->getClientId(),
+            'refresh_token' => $this->apiParams->getToken()->getRefreshToken(),
+            'client_id' => $this->apiParams->getClientId(),
+            'client_secret' => $this->apiParams->getClientSecret(),
         ];
     }
 
     public function fromSfObject(string $data): SalesForceDtoInterface
     {
         $this->returnData = \GuzzleHttp\json_decode($data);
+
+        /**
+         * @var OAuthToken
+         */
+        $this->apiParams->getToken()->refresh( (array)$this->returnData);
+
+        return $this;
+    }
+
+    /**
+     * @return OAuthToken
+     */
+    public function getToken()
+    {
+        return $this->apiParams->getToken();
     }
 
 }
