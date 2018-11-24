@@ -1,8 +1,14 @@
 <?php 
 namespace App\Models;
 
-class Token extends BaseModel { 
+use App\Entities\OAuthToken;
+
+class Token extends BaseModel {
+
     public $primaryKey = 'id_token';
+
+    protected $entity = OAuthToken::class;
+
     protected $table = 'token';
 
     protected $casts = [
@@ -16,7 +22,10 @@ class Token extends BaseModel {
                 'type' => 'site',
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
+
+            //???
             array_filter($this->getFillable()),
+            //???
             array_filter($attributes)
         );
 

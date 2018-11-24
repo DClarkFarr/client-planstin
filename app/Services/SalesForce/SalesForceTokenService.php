@@ -10,6 +10,9 @@ namespace App\Services\SalesForce;
 
 use App\Services\SalesForce\ApiCall\RequestAccessToken;
 use App\Services\SalesForce\Dto\RequestAccessTokenDto;
+use App\Services\SalesForce\Dto\RequestRefreshTokenDto;
+use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 
 class SalesForceTokenService
 {
@@ -27,12 +30,24 @@ class SalesForceTokenService
      */
     protected $requestAccessTokenApiCall;
 
+    /**
+     * @var EntityManager
+     */
+    protected $entityManager;
+
     public function __construct(
         SalesForceApiParameters $apiParams,
-        RequestAccessToken $requestAccessToken
+        RequestAccessToken $requestAccessToken,
+        EntityManagerInterface $entityManager
     ) {
         $this->apiParams = $apiParams;
         $this->requestAccessTokenApiCall = $requestAccessToken;
+        $this->entityManager = $entityManager;
+    }
+
+    private function loadAccessToken()
+    {
+
     }
 
     /**
@@ -52,29 +67,64 @@ class SalesForceTokenService
         );
     }
 
-    public function refreshAccessToken($refresh){
+    /**
+     * @param $authorizationCode
+     * @return bool
+     * @throws \Throwable
+     */
+    public function requestAccessToken($authorizationCode): bool
+    {
+        //@Todo: Add logic to check for an existing access token and refresh it if it exists.
+
+        $dto = new RequestAccessTokenDto(
+            $authorizationCode,
+            $this->apiParams,
+            'authorization_code'
+        );
+
+        try {
+
+            $result = $this->requestAccessTokenApiCall
+                ->setData($dto)
+                ->execute();
+
+        } catch (\Throwable $exception) {
+            throw $exception;
+        }
+
+        $this->entityManager->persist($dto->getToken());
+        $this->entityManager->flush();
+
+        return true;
+    }
+
+    public function refreshAccessToken($refresh)
+    {
         /**
          * POST /services/oath2/token HTTP/1.1
          * Host: login.salesforce.com
          * Authorization:  Basic client_id=3MVG9lKcPoNINVBIPJjdw1J9LLM82HnFVVX19KY1uA5mu0QqEWhqKpoW3svG3XHrXDiCQjK1mdgAvhCscA9GE&client_secret=1955279925675241571
          * grant_type=refresh_token&refresh_token=your token here
          */
+        $dto = new RequestRefreshTokenDto(
+            $this->apiParams,
+            'refresh_token'
+        );
 
-        $post = [
-            'grant_type' => 'refresh_token',
-            'refresh_token' => $refresh,
-        ];
+        try {
 
-        return $this->call('post', 'client', "$this->auth_endpoint/services/oauth2/token", $post);
+            $result = $this->requestAccessTokenApiCall
+                ->setData($dto)
+                ->execute();
+
+        } catch (\Throwable $exception) {
+
+        }
 
     }
 
-    public function requestAccessToken($authorizationCode){
+    private function updateAccessToken()
+    {
 
-        $dto = new RequestAccessTokenDto($authorizationCode,'');
-
-        $result = $this->requestAccessTokenApiCall
-            ->setData($dto)
-            ->execute();
     }
 }

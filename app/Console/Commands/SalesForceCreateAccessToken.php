@@ -48,10 +48,23 @@ class SalesForceCreateAccessToken extends Command
         $authCodeUrl = $this->tokenService->getAuthUrl();
 
         $this->info(\sprintf(
-            'Please navigate to %s and enter your authorization code below',
+            'Please navigate to %s and enter your authorization code below:',
             $authCodeUrl
         ));
 
         $authCode = $this->ask('Enter Authorization Code:');
+
+        try {
+
+            $result = $this->tokenService->requestAccessToken($authCode);
+
+        } catch (\Throwable $exception) {
+
+            $this->error($exception->getMessage());
+
+            if ($this->confirm('Would you like to dump the exception?')) {
+                \dump($exception);
+            }
+        }
     }
 }

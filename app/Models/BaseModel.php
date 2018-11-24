@@ -4,37 +4,57 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class BaseModel extends Model {
+class BaseModel extends Model
+{
 
-    public static function getTableStatic(){
-        return ((new static)->getTable());
+    /**
+     * The FQN of the entity used to represent records of this table.
+     *
+     * @var string
+     */
+    protected $entity;
+
+    /**
+     * @deprecated ( not in use )
+     *
+     * @return string
+     */
+    public static function getTableStatic()
+    {
+        return (new static)->getTable();
     }
-    public function getTable(){
+
+    public function getTable()
+    {
         return $this->table;
     }
 
-    public function set($attributes = []){
-        foreach($attributes as $key => $val){
+    public function set($attributes = [])
+    {
+        foreach ($attributes as $key => $val) {
             $this->$key = $val;
         }
 
         return $this;
     }
-    public function setAndSave($attributes){
+
+    public function setAndSave($attributes)
+    {
         $this->set($attributes);
         $this->save();
 
         return $this;
     }
 
-    public static function create($attributes = []){
+    public static function create($attributes = [])
+    {
         $model = new static;
 
         $model->setForCreate($attributes);
-        
+
         list($status, $message) = $model->validateCreate();
 
-        if(!$status){
+        if (!$status) {
             return [$status, $message];
         }
 
@@ -42,10 +62,14 @@ class BaseModel extends Model {
 
         return [$model, ''];
     }
-    public function setForCreate($attributes = []){
+
+    public function setForCreate($attributes = [])
+    {
         return $this->set($attributes);
     }
-    public function validateCreate(){
+
+    public function validateCreate()
+    {
         return [true, ''];
     }
 }

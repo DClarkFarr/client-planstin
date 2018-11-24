@@ -9,9 +9,10 @@
 namespace App\Exceptions\SalesForce;
 
 use AbstractSalesForceApiCall;
+use App\Services\SalesForce\ApiCall\AbstractRestApiCall;
 use Exception;
 
-class SalesForceApiCallErrorException extends Exception
+class SalesForceApiException extends Exception
 {
     protected $format = 'The api call %s returned an error: %s';
 
@@ -20,9 +21,9 @@ class SalesForceApiCallErrorException extends Exception
     protected $errorMessage;
 
     public function __construct(
-        AbstractSalesForceApiCall $apiCall,
+        AbstractRestApiCall $apiCall,
         $errorMessage = '',
-        $code = null,
+        $code = 0,
         \Throwable $previous = null
     ) {
 
@@ -33,9 +34,9 @@ class SalesForceApiCallErrorException extends Exception
     }
 
     /**
-     * @return AbstractSalesForceApiCall
+     * @return AbstractRestApiCall
      */
-    public function getApiCall(): AbstractSalesForceApiCall
+    public function getApiCall(): AbstractRestApiCall
     {
         return $this->apiCall;
     }
