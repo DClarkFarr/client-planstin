@@ -164,7 +164,7 @@ return [
         Illuminate\Hashing\HashServiceProvider::class,
         Illuminate\Mail\MailServiceProvider::class,
         Illuminate\Pipeline\PipelineServiceProvider::class,
-        Illuminate\Auth\Passwords\PasswordResetServiceProvider::class,
+//        Illuminate\Auth\Passwords\PasswordResetServiceProvider::class,
         Illuminate\Queue\QueueServiceProvider::class,
         Illuminate\Session\SessionServiceProvider::class,
         Illuminate\Translation\TranslationServiceProvider::class,
@@ -177,6 +177,7 @@ return [
         Barryvdh\Form\ServiceProvider::class,
         LaravelDoctrine\ORM\DoctrineServiceProvider::class,
         LaravelDoctrine\Migrations\MigrationsServiceProvider::class,
+        LaravelDoctrine\ORM\Auth\Passwords\PasswordResetServiceProvider::class,
 
         /*
          * Application Service Providers...
