@@ -84,9 +84,7 @@ body {
 }
 
 @media(min-width: 992px){
-    .body-main .sidebar {
-        width: 400px;
-    }
+ 
 }
 
 /* Login Body Layout Styling */
@@ -749,23 +747,17 @@ html, body {
     font-family: Gotham-b;
     font-size: 16px;
     letter-spacing: 2px;
-    padding: 22px 23px;
+    padding: 25px 15px 18px;
     border-radius: 8px;
-    width: 206px;
     display: block;
-    
+    text-align: center;
     background-image: -ms-linear-gradient(top, #E5E4E4 0%, #C7C7C7 100%);
-
-background-image: -moz-linear-gradient(top, #E5E4E4 0%, #C7C7C7 100%);
-
-background-image: -o-linear-gradient(top, #E5E4E4 0%, #C7C7C7 100%);
-
-background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E5E4E4), color-stop(100, #C7C7C7));
-
-background-image: -webkit-linear-gradient(top, #E5E4E4 0%, #C7C7C7 100%);
-
-background-image: linear-gradient(to bottom, #E5E4E4 0%, #C7C7C7 100%);
-    
+    background-image: -moz-linear-gradient(top, #E5E4E4 0%, #C7C7C7 100%);
+    background-image: -o-linear-gradient(top, #E5E4E4 0%, #C7C7C7 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E5E4E4), color-stop(100, #C7C7C7));
+    background-image: -webkit-linear-gradient(top, #E5E4E4 0%, #C7C7C7 100%);
+    background-image: linear-gradient(to bottom, #E5E4E4 0%, #C7C7C7 100%);
+        
 }
 .dashboard-link i{
     margin-right: 8px;

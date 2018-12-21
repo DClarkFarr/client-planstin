@@ -86,7 +86,7 @@ Route::prefix('member/dashboard')->group(function(){
     Route::any('benefits', 'Member\DashboardController@benefits')->name('member.benefits');
     Route::any('dependents', 'Member\DashboardController@dependents')->name('member.dependents');
     Route::any('employer', 'Member\DashboardController@employer')->name('member.employer');
-    Route::any('event-submit', 'Member\DashboardController@eventSubmit')->name('member.event-submit');
+    Route::any('submit-event', 'Member\DashboardController@submitEvent')->name('member.submit-event');
     Route::any('settings', 'Member\DashboardController@settings')->name('member.settings');
 });
 

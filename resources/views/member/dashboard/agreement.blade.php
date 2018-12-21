@@ -1,21 +1,14 @@
-@extends('layouts.portal')
+@extends('layouts.portal-member')
 
 @section('content')
 
-    <!--payroll agree-->
-    <section class="aompny-benefit">
-        <div class="container">
-            <h3 class="benefit-title text-black">Base Health Agreement</h3>
-            <form action="">
-                <div class="payroll-agree">
 
-                </div>
-                <div class="clearfix"></div>
-            </form>
+    <h3 class="benefit-title text-black">Base Health Agreement</h3>
+    <form action="">
+        <div class="payroll-agree">
+
         </div>
-    </section>
-    <div class="push"></div>
-    </div>
-    <!-- payroll agree end-->
-
+        <div class="clearfix"></div>
+    </form>
+       
 @endsection
