@@ -1,15 +1,19 @@
 /*  Color Theme */
 
-/* Login Footer Background */
-.bg-gray-4 {
+.bg-gray {
     background: #1A1A1A;
 }
-.text-gray-4 {
+.text-gray {
     color: #1A1A1A;
 }
 
-/* Login Body Background */
-
+.bg-gray-4 {
+    background: #070707;
+}
+.text-gray-4,
+.nav-link {
+    color: #070707;
+}
 .bg-gray-3 {
     background: #707070;
 }
@@ -38,24 +42,54 @@
     color: #000000;
 }
 
+
+.bg-blue-dark {
+    background-color: #282C30;
+}
+.text-blue-light,
+.footer p,
+.footer a {
+    color: #9FA4AF;
+}
 .bg-white {
     background: #FFFFFF;
 }
-.text-white {
+.text-white,
+.btn-red,
+.btn-red:focus,
+.btn-red:hover,
+.btn-red.active,
+.footer,
+.footer h4 {
     color: #FFFFFF;
 }
 
-.bg-red {
+.bg-red,
+.btn-red {
     background: #E50D0D;
 }
-.text-red {
-    color: #E50D0D!important;
+.text-red,
+.btn-link.btn-red,
+.nav-link-red,
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+    color: #E50D0D;
 }
 
-.bg-red-dark {
+.bg-red-dark,
+.btn-red:hover,
+.btn-red:focus,
+.btn-red.active {
     background: #AE2727;
 }
-.text-red-dark {
+.text-red-dark,
+.nav-link-red:hover,
+.nav-link-red:focus,
+.nav-link-red.active,
+.btn-link.btn-red:hover,
+.btn-link.btn-red:focus,
+.btn-link.btn-red.active {
     color: #AE2727;
 }
 .bg-head-gray{
@@ -65,7 +99,7 @@
     text-align: right;
 }
 
-.bg-sidebar{
+.bg-sidebar {
     background: #cbcbcb;
 }
 
@@ -166,7 +200,7 @@ body {
 }
 
 @font-face {
-    font-family: SEGOEUI-r;
+    font-family: segoui-r;
     src:url(../fonts/SEGOEUI/SEGOEUI.TTF);
 }
 
@@ -193,9 +227,14 @@ body {
 
 
 /*head navbar*/
-.navbar li a{
-    color: #fff;
-    font-family: CharlevoixPro-M;
+.navbar {
+    border-bottom: solid 2px #ebebeb;
+}
+.navbar-brand {
+    margin-right: 2rem;
+}
+.nav-link {
+    font-family: segoui-r;
     font-size: 16px;
     text-transform: uppercase;
 }
@@ -253,15 +292,54 @@ body {
 }
 
 /*FOOTER CSS*/
-.footer-text{
-    font-family: Roboto-l;
-    font-size: 14px;
-    text-align: center;
-}
 footer{
     width: 100%;
     padding-top: 16px;
     padding-bottom: 13px;
+    font-size: 0.8rem;
+}
+
+footer .media {
+    margin-bottom: 15px;
+}
+footer .media .icon {
+    padding: 10px;
+    background: #1C1F23;
+    margin-right: 15px;
+}
+footer .media .icon img {
+    width: 35px;
+}
+
+footer .badge {
+    background-color: #1C1F23;
+    color: #9FA4AF;
+    font-size: 90%;
+    padding: .5em 1em;
+}
+
+.footer .links {
+    font-weight: 200;
+}
+.footer .links .fa {
+    font-size: 1.2rem;
+    padding-top: 3px;
+
+}
+
+
+
+
+footer h4 {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+.footer-text{
+    font-family: Roboto-l;
+    font-size: 14px;
+    text-align: center;
 }
 
 
@@ -1351,11 +1429,6 @@ html, body {
     display: none;
 }
 
-
-.navbar-expand-lg .navbar-nav .nav-link:hover{
-    color: #5c5c5c;
-}
-
 #exampleInputEmailsettings{
     width:650.13px;
     height:56px;
@@ -1628,64 +1701,56 @@ html, body {
 
 @media(max-width: 991px){
     .border-btm::after{
-    position: absolute;
-    bottom: -9px;
-    left: 14px;
-    width: 98%;
-    height: 0px;
-    background: #707070;
-    content: '';
+        position: absolute;
+        bottom: -9px;
+        left: 14px;
+        width: 98%;
+        height: 0px;
+        background: #707070;
+        content: '';
     }
     .checkPayMethod li:first-child{
-    margin-left: 30px;
+        margin-left: 30px;
     }
     .btm-bdr{
-     display: none;
+        display: none;
     }
     .invoice-list li {
-    list-style: none;
-    float: left;
-    margin-right: 10px;
+        list-style: none;
+        float: left;
+        margin-right: 10px;
     }
     .pdf-img {
-    width: 50px;
+        width: 50px;
     }
     .next-img {
-
-    width: 27px;
-    margin-top: 16px;
+        width: 27px;
+        margin-top: 16px;
         margin-left: 10px;
-
     }
     .invoice-list li a span {
-    font-size: 14px;
-    margin-top: 6px;
+        font-size: 14px;
+        margin-top: 6px;
     }
 }
 
 @media(min-width: 991px){
-    .navbar{
-    height: 90px;
+    .navbar {
+        height: 90px;
     }
-    .navbar-right{
-    float: right!important;
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
     }
-    /*cuatom conatiner*/
-    .container{
-        max-width: 1024px;
-    }
-    .navbar li{
-    margin-left: 30px;
-    }
-    
+
     .btm-bdr{
-    width: 100%;
-    height: 4px;
-    background: #b6b6b6;
-    border-top: 0;
+        width: 100%;
+        height: 4px;
+        background: #b6b6b6;
+        border-top: 0;
     }
     .img-check{
-         max-width: 415px;
+        max-width: 415px;
     }
 }
 
