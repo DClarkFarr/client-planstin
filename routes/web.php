@@ -32,10 +32,24 @@ EOHTML;
 
 Route::view('/', "links");
 
-Route::get('login/client', 'Client\LoginController@login');
-Route::get('login/client/forgot-password', 'Client\LoginController@forgotPassword');
-Route::get('login/client/reset-password', 'Client\LoginController@resetPassword');
-Route::get('login/client/recovery-code', 'Client\LoginController@recoveryCode');
+Route::prefix('login')->group(function(){
+
+    Route::prefix('client')->group(function(){
+        Route::get('/', 'Client\LoginController@login')->name('client.login');
+        Route::get('/forgot-password', 'Client\LoginController@forgotPassword')->name('client.login.forgot');
+        Route::get('/reset-password', 'Client\LoginController@resetPassword')->name('client.login.reset');
+        Route::get('/recovery-code', 'Client\LoginController@recoveryCode')->name('client.login.recovery'); 
+    });
+
+    Route::prefix('member')->group(function(){
+        Route::get('/', 'Member\LoginController@login')->name('member.login');
+        Route::get('/forgot-password', 'Member\LoginController@forgotPassword')->name('member.login.forgot');
+        Route::get('/reset-password', 'Member\LoginController@resetPassword')->name('member.login.reset');
+        Route::get('/recovery-code', 'Member\LoginController@recoveryCode')->name('member.login.recovery'); 
+    });
+
+});
+
 
 
 Route::prefix('register')->group(function()
@@ -54,7 +68,9 @@ Route::prefix('register')->group(function()
     /*  /register/member/...  */
     Route::prefix('member')->group(function()
     {
-        
+        Route::any('signup', 'Member\RegisterController@create')->name('member.signup');
+        Route::any('enrollment', 'Member\RegisterController@enrollment')->name('member.enrollment');
+        Route::any('agreement', 'Member\RegisterController@agreement')->name('member.agreement');
     });
 });
 
