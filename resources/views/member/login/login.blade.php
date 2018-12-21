@@ -12,21 +12,27 @@
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <form class="login-field">
                         <h2 class="cmpny-text text-black">Employee Login</h2>
-                        <h3 class="recovery-text text-black">Insert your e-mail address and we will send you a recovery link</h3>
                         <div class="form-group">
                             <label class="login-input-label text-black" for="exampleInputEmail1">E-mail address</label>
                             <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your email address">
-                            <small class="form-text text-muted text-red text-right">Wrong username </small>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block btn-submit bg-red text-white">send</button>
+                        <div class="form-group">
+                            <label class="login-input-label text-black" for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Your password">
+                            <small class="form-text text-muted text-red text-right">Wrong username Or password</small>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block btn-submit bg-red text-white">sign in</button>
+                        <p class="forgot-pass no-mgr-bottom text-black">Forgot password or username? <a class="text-red" href="#">Click Here</a></p>
+                        <p class="forgot-pass no-mgr-top text-black">Don't have account yet? <a class="text-red" href="#">Register</a></p>
                     </form>
                 </div>
             </div>
         </div>
     </section>
+    <!-- login body content end-->
     <div class="push"></div>
     </div>
-    <!-- login body content end-->
+
 
 
 @endsection
