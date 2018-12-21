@@ -202,9 +202,7 @@ body {
 .head-logo{
     max-width: 230px;
 }
-.navbar-collapse {
-    /*! flex-grow: 0!important; */
-}
+
 /*Login body*/
 .login-container{
     max-width: 771px !important;
@@ -500,9 +498,7 @@ html, body {
     list-style: none;
     border-bottom: 1px solid #707070;
 }
-.plans li{
-    
-}
+
 .plan-check{
     margin-top: -5px;
 }
@@ -685,9 +681,7 @@ html, body {
     margin-top: 40px;
     margin-bottom: 40px;
 }
-.seo-p{
-    /*font-family: ;*/
-}
+
 .add-more-btn{
     cursor: pointer;
     font-family: BasicSans-l;
@@ -1080,7 +1074,7 @@ html, body {
 }
 .account-info li{
     list-style: none;
-    font-family: font-family: sfui-r;
+    font-family: sfui-r;
     font-size: 14px;
     color: #777777;
 }
