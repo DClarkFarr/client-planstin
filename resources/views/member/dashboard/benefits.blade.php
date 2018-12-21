@@ -1,9 +1,6 @@
-@extends($includes->body)
+@extends('layouts.portal')
 
 @section('content')
-
-    @include('includes.sidebar')
-
 
     <!-- body content -->
     <div class="col-md-9">

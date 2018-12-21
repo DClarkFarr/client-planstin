@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class RegisterController extends Controller {
-    public function create(Request $request){
+    public function signup(Request $request){
         
 
         return $this->view('member.register.signup');

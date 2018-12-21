@@ -58,7 +58,7 @@ Route::prefix('register')->group(function()
     Route::prefix('client')->group(function()
     {
         //Todo: Create middleware to make sure the user is on the correct step
-        Route::any('signup', 'Client\RegisterController@createUser')->name('client_register_signup');
+        Route::any('signup', 'Client\RegisterController@signup')->name('client_register_signup');
         Route::any('profile', 'Client\RegisterController@profile')->name('client_register_profile');
         Route::any('services', 'Client\RegisterController@services')->name('client_register_services');
         Route::any('agreement', 'Client\RegisterController@agreement')->name('client_register_agreements');
@@ -68,17 +68,26 @@ Route::prefix('register')->group(function()
     /*  /register/member/...  */
     Route::prefix('member')->group(function()
     {
-        Route::any('signup', 'Member\RegisterController@create')->name('member.signup');
+        Route::any('signup', 'Member\RegisterController@signup')->name('member.signup');
         Route::any('enrollment', 'Member\RegisterController@enrollment')->name('member.enrollment');
         Route::any('agreement', 'Member\RegisterController@agreement')->name('member.agreement');
     });
 });
 
 
-Route::prefix('portal')->group(function() {
-    Route::prefix('company')->group(function(){
-        Route::get('dashboard', 'Company\DashboardController@index');
-    });
+Route::prefix('client')->group(function(){
+    Route::get('dashboard', 'Client\DashboardController@home');
+});
+
+Route::prefix('member/dashboard')->group(function(){
+    Route::any('/', 'Member\DashboardController@home')->name('member.dashboard');
+
+    Route::any('agreement', 'Member\DashboardController@agreement')->name('member.agreement');
+    Route::any('benefits', 'Member\DashboardController@benefits')->name('member.benefits');
+    Route::any('dependents', 'Member\DashboardController@dependents')->name('member.dependents');
+    Route::any('employer', 'Member\DashboardController@employer')->name('member.employer');
+    Route::any('event-submit', 'Member\DashboardController@eventSubmit')->name('member.event-submit');
+    Route::any('settings', 'Member\DashboardController@settings')->name('member.settings');
 });
 
 

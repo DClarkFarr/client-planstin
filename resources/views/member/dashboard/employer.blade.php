@@ -1,9 +1,6 @@
-@extends($includes->body)
+@extends('layouts.portal')
 
 @section('content')
-
-    @include('includes.sidebar')
-
     <!-- body content -->
     <div class="col-md-9">
         <h3 class="side-bra-smi-h3 disply-inline">Your Employer</h3>
