@@ -1,4 +1,4 @@
-@extends('layouts.portal-member')
+@extends('layouts.portal-broker')
 
 @section('content')
 

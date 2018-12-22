@@ -90,7 +90,7 @@ Route::prefix('register')->group(function() {
 
 Route::prefix('client/dashboard')->group(function(){
     Route::get('/', 'Client\DashboardController@home');
-    //other client groups
+    //other client routes
 });
 
 Route::prefix('member/dashboard')->group(function(){
@@ -102,6 +102,18 @@ Route::prefix('member/dashboard')->group(function(){
     Route::any('employer', 'Member\DashboardController@employer')->name('member.employer');
     Route::any('submit-event', 'Member\DashboardController@submitEvent')->name('member.submit-event');
     Route::any('settings', 'Member\DashboardController@settings')->name('member.settings');
+});
+
+
+Route::prefix('broker/dashboard')->group(function(){
+    Route::any('/', 'Broker\DashboardController@home')->name('broker.dashboard');
+
+    Route::any('profile', 'Broker\DashboardController@profile')->name('broker.profile');
+    Route::any('direct-deposit', 'Broker\DashboardController@directDeposit')->name('broker.direct-deposit');
+    Route::any('clients', 'Broker\DashboardController@clients')->name('broker.clients');
+    Route::any('statements', 'Broker\DashboardController@statements')->name('broker.statements');
+    Route::any('documents', 'Broker\DashboardController@documents')->name('broker.documents');
+    Route::any('settings', 'Broker\DashboardController@settings')->name('broker.settings');
 });
 
 

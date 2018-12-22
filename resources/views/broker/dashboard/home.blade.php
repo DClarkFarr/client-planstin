@@ -1,4 +1,4 @@
-@extends('layouts.portal-member')
+@extends('layouts.portal-broker')
 
 @section('content')
 
@@ -8,25 +8,25 @@
 
     <div class="row">
         <div class="col-md-4">
-            <p class="center"> <a href="{{route('member.employer')}}" class="dashboard-link text-red"><i class="fa fa-address-card-o" aria-hidden="true"></i><span>Employer</span></a></p>
+            <p class="center"> <a href="{{route('broker.profile')}}" class="dashboard-link text-red"><i class="fa fa-address-card-o" aria-hidden="true"></i><span>Profile</span></a></p>
         </div>
         <div class="col-md-4">
-            <p class="center"><a href="{{route('member.benefits')}}" class="dashboard-link text-red"><i class="fa fa-sliders" aria-hidden="true"></i>Benefits</a></p>
+            <p class="center"><a href="{{route('broker.direct-deposit')}}" class="dashboard-link text-red"><i class="fa fa-sliders" aria-hidden="true"></i>Direct Deposit</a></p>
         </div>
         <div class="col-md-4">
-            <p class="center"> <a href="{{route('member.dependents')}}" class="dashboard-link text-red"><i class="fa fa-users" aria-hidden="true"></i>Dependents</a></p>
+            <p class="center"> <a href="{{route('broker.clients')}}" class="dashboard-link text-red"><i class="fa fa-users" aria-hidden="true"></i>Clients</a></p>
         </div>
     </div>
 
     <div class="row mgrt-3">
         <div class="col-md-4">
-            <p class="center"> <a href="{{route('member.submit-event')}}" class="dashboard-link text-red"><i class="fa fa-calculator" aria-hidden="true"></i>Submit Event</a></p>
+            <p class="center"> <a href="{{route('broker.statements')}}" class="dashboard-link text-red"><i class="fa fa-calculator" aria-hidden="true"></i>Statements</a></p>
         </div>
         <div class="col-md-4">
-            <p class="center"><a href="{{route('member.agreement')}}" class="dashboard-link text-red"><i class="fa fa-files-o" aria-hidden="true"></i>Agreement</a></p>
+            <p class="center"><a href="{{route('broker.documents')}}" class="dashboard-link text-red"><i class="fa fa-files-o" aria-hidden="true"></i>Documents</a></p>
         </div>
         <div class="col-md-4">
-            <p class="center"> <a href="{{route('member.settings')}}" class="dashboard-link text-red"><i class="fa fa-cogs" aria-hidden="true"></i>Settings</a></p>
+            <p class="center"> <a href="{{route('broker.settings')}}" class="dashboard-link text-red"><i class="fa fa-cogs" aria-hidden="true"></i>Settings</a></p>
         </div>
 
     </div>
