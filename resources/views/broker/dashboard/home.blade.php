@@ -11,7 +11,7 @@
             <p class="center"> <a href="{{route('broker.profile')}}" class="dashboard-link text-red"><i class="fa fa-address-card-o" aria-hidden="true"></i><span>Profile</span></a></p>
         </div>
         <div class="col-md-4">
-            <p class="center"><a href="{{route('broker.direct-deposit')}}" class="dashboard-link text-red"><i class="fa fa-sliders" aria-hidden="true"></i>Direct Deposit</a></p>
+            <p class="center"><a href="{{route('broker.deposit')}}" class="dashboard-link text-red"><i class="fa fa-sliders" aria-hidden="true"></i>Direct Deposit</a></p>
         </div>
         <div class="col-md-4">
             <p class="center"> <a href="{{route('broker.clients')}}" class="dashboard-link text-red"><i class="fa fa-users" aria-hidden="true"></i>Clients</a></p>

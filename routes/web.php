@@ -109,7 +109,8 @@ Route::prefix('broker/dashboard')->group(function(){
     Route::any('/', 'Broker\DashboardController@home')->name('broker.dashboard');
 
     Route::any('profile', 'Broker\DashboardController@profile')->name('broker.profile');
-    Route::any('direct-deposit', 'Broker\DashboardController@directDeposit')->name('broker.direct-deposit');
+    Route::any('direct-deposit', 'Broker\DashboardController@directDeposit')->name('broker.deposit');
+    Route::any('direct-deposit/edit', 'Broker\DashboardController@directDepositEdit')->name('broker.deposit.edit');
     Route::any('clients', 'Broker\DashboardController@clients')->name('broker.clients');
     Route::any('statements', 'Broker\DashboardController@statements')->name('broker.statements');
     Route::any('documents', 'Broker\DashboardController@documents')->name('broker.documents');

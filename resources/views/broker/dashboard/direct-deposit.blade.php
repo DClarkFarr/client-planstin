@@ -26,7 +26,7 @@
             </table>
         </div>
         <div class="col-sm-4">
-            <button class="btn btn-lg btn-link btn-black"><i class="fa fa-pencil"></i> Edit Bank Info</button>
+            <a href="{{ route('broker.deposit.edit') }}" class="btn btn-lg btn-link btn-black"><i class="fa fa-pencil"></i> Edit Bank Info</a>
             <button class="btn btn-lg btn-link btn-black"><i class="fa fa-times"></i> Delete Bank Info</button>
         </div>
     </div>

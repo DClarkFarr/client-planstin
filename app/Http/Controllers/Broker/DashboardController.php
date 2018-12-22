@@ -20,6 +20,10 @@ class DashboardController extends Controller {
 
         return $this->view('broker.dashboard.direct-deposit');
     }
+    public function directDepositEdit(Request $request){
+
+        return $this->view('broker.dashboard.direct-deposit-edit');
+    }
     public function clients(Request $request){
 
         return $this->view('broker.dashboard.clients');
