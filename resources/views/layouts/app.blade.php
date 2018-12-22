@@ -19,7 +19,7 @@
 
     <link rel="stylesheet" href="/css/animate.css">
     <!-- <link rel="stylesheet" href="{{asset('skins/flat/_all.css')}}"> -->
-    <!-- <link rel="stylesheet" href="/css/faq.css"> -->
+    <link rel="stylesheet" href="/css/faq.css">
     <link rel="stylesheet" href="/css/style.css">
 
     <!-- Scripts -->
@@ -29,7 +29,7 @@
     <script type="text/javascript" src="/js/popper.min.js"></script>
     <script type="text/javascript" src="/js/script.js"></script>
     <script type="text/javascript" src="{{asset('js/icheck.js')}}"></script>
-    <!-- <script type="text/javascript" src="/js/faq.js"></script> -->
+    <script type="text/javascript" src="/js/faq.js"></script>
 
     <script>
         $(document).ready(function(){
