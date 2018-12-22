@@ -1458,6 +1458,28 @@ html, body {
     margin-top: 20px;
 }
 
+.table-lg td {
+    padding: 15px 25px;
+}
+.profile-table tr:first-child > * {
+    border-top: solid 1px;
+}
+.profile-table tr > * {
+    border-bottom: solid 1px;
+}
+.profile-table tr > :first-child {
+    border-right: solid 1px;
+}
+
+.statements p,
+.documents p {
+    line-height: 1.2;
+}
+
+.documents img {
+    max-width: 60px;
+    margin-bottom: 3px;
+}
 
 
 

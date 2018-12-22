@@ -22,7 +22,7 @@ class DashboardController extends Controller {
     }
     public function clients(Request $request){
 
-        return $this->view('broker.dashboard.dependents');
+        return $this->view('broker.dashboard.clients');
     }
     public function statements(Request $request){
 

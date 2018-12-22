@@ -5,7 +5,7 @@
     <!-- body content -->
     <div class="row">
         <div class="col-md-10">
-            <h3 class="side-bra-smi-h3 disply-inline">Login information</h3>
+            <h3 class="">Login information</h3>
 
             <form class="login-field settings-field emp-login-field">
                 <div class="form-group">
