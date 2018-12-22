@@ -36,38 +36,44 @@ Route::prefix('login')->group(function(){
 
     Route::prefix('client')->group(function(){
         Route::get('/', 'Client\LoginController@login')->name('client.login');
-        Route::get('/forgot-password', 'Client\LoginController@forgotPassword')->name('client.login.forgot');
-        Route::get('/reset-password', 'Client\LoginController@resetPassword')->name('client.login.reset');
-        Route::get('/recovery-code', 'Client\LoginController@recoveryCode')->name('client.login.recovery'); 
+        Route::get('/forgot-password', 'Client\LoginController@forgotPassword')->name('client.forgot');
+        Route::get('/reset-password', 'Client\LoginController@resetPassword')->name('client.reset');
+        Route::get('/recovery-code', 'Client\LoginController@recoveryCode')->name('client.recovery'); 
     });
 
     Route::prefix('member')->group(function(){
         Route::get('/', 'Member\LoginController@login')->name('member.login');
-        Route::get('/forgot-password', 'Member\LoginController@forgotPassword')->name('member.login.forgot');
-        Route::get('/reset-password', 'Member\LoginController@resetPassword')->name('member.login.reset');
-        Route::get('/recovery-code', 'Member\LoginController@recoveryCode')->name('member.login.recovery'); 
+        Route::get('/forgot-password', 'Member\LoginController@forgotPassword')->name('member.forgot');
+        Route::get('/reset-password', 'Member\LoginController@resetPassword')->name('member.reset');
+        Route::get('/recovery-code', 'Member\LoginController@recoveryCode')->name('member.recovery'); 
+    });
+
+    Route::prefix('broker')->group(function(){
+        Route::get('/', 'Broker\LoginController@login')->name('broker.login');
+        Route::get('/forgot-password', 'Broker\LoginController@forgotPassword')->name('broker.forgot');
+        Route::get('/reset-password', 'Broker\LoginController@resetPassword')->name('broker.reset');
+        Route::get('/recovery-code', 'Broker\LoginController@recoveryCode')->name('broker.recovery'); 
     });
 
 });
 
 
 
-Route::prefix('register')->group(function()
-{
+Route::prefix('register')->group(function() {
+
     /*  /register/client/...  */
-    Route::prefix('client')->group(function()
-    {
+    Route::prefix('client')->group(function() {
         //Todo: Create middleware to make sure the user is on the correct step
-        Route::any('signup', 'Client\RegisterController@signup')->name('client_register_signup');
-        Route::any('profile', 'Client\RegisterController@profile')->name('client_register_profile');
-        Route::any('services', 'Client\RegisterController@services')->name('client_register_services');
-        Route::any('agreement', 'Client\RegisterController@agreement')->name('client_register_agreements');
-        Route::any('employees', 'Client\RegisterController@employees')->name('client_register_employees');
+        Route::any('signup', 'Client\RegisterController@signup')->name('client.signup');
+        Route::any('profile', 'Client\RegisterController@profile')->name('client.profile');
+        Route::any('services', 'Client\RegisterController@services')->name('client.services');
+        Route::any('agreement', 'Client\RegisterController@agreement')->name('client.agreements');
+        Route::any('employees', 'Client\RegisterController@employees')->name('client.employees');
     });
 
     /*  /register/member/...  */
-    Route::prefix('member')->group(function()
-    {
+    Route::prefix('member')->group(function() {
+
         Route::any('signup', 'Member\RegisterController@signup')->name('member.signup');
         Route::any('enrollment', 'Member\RegisterController@enrollment')->name('member.enrollment');
         Route::any('agreement', 'Member\RegisterController@agreement')->name('member.agreement');
@@ -75,8 +81,9 @@ Route::prefix('register')->group(function()
 });
 
 
-Route::prefix('client')->group(function(){
-    Route::get('dashboard', 'Client\DashboardController@home');
+Route::prefix('client/dashboard')->group(function(){
+    Route::get('/', 'Client\DashboardController@home');
+    //other client groups
 });
 
 Route::prefix('member/dashboard')->group(function(){
@@ -89,21 +96,6 @@ Route::prefix('member/dashboard')->group(function(){
     Route::any('submit-event', 'Member\DashboardController@submitEvent')->name('member.submit-event');
     Route::any('settings', 'Member\DashboardController@settings')->name('member.settings');
 });
-
-
-// Route::prefix('employer')->group(function(){
-//     Route::get('{controller?}/{method?}/{segments?}', 'MvcController@receive')->where([
-//         'segments' => '.*',
-//     ]);
-// });
-// Route::prefix('employee')->group(function(){
-//     Route::get('{controller?}/{method?}/{segments?}', 'MvcController@receive')->where([
-//         'segments' => '.*',
-//     ]);
-// });
-// Route::get('{controller?}/{method?}/{segments?}', 'MvcController@receive')->where([
-//     'segments' => '.*',
-// ]);
 
 
 

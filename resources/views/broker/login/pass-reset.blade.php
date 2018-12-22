@@ -22,7 +22,8 @@
                             <small class="form-text text-white text-right">Password did not match</small>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block btn-submit btn-black pass-r-m-b">reset</button>
-                        <p class="forgot-pass no-mgr-top text-white">Don't have account yet? <a class="btn-link btn-black" href="#">Sign up</a></p>
+                        <p class="forgot-pass no-mgr-top text-white"><a class="text-white" href="{{route('broker.login')}}"><i class="fa fa-arrow-left"></i> Return to Login</a></p>
+
                     </form>
                 </div>
             </div>

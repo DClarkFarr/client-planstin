@@ -2,8 +2,6 @@
 
 @section('header')
 
-    {{--<div class="wrapper">--}}
-
     <!-- header start -->
     <header>
         <nav class="navbar navbar-expand-lg bg-white">
