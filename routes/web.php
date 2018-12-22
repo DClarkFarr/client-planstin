@@ -78,6 +78,13 @@ Route::prefix('register')->group(function() {
         Route::any('enrollment', 'Member\RegisterController@enrollment')->name('member.enrollment');
         Route::any('agreement', 'Member\RegisterController@agreement')->name('member.agreement');
     });
+
+    Route::prefix('broker')->group(function() {
+
+        Route::any('signup', 'Broker\RegisterController@signup')->name('broker.signup');
+        Route::any('contracting', 'Broker\RegisterController@contracting')->name('broker.contractings');
+        Route::any('agreement', 'Broker\RegisterController@agreement')->name('broker.agreement');
+    });
 });
 
 

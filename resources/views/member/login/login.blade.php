@@ -22,8 +22,8 @@
                             <small class="form-text text-white text-right">Wrong username Or password</small>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block btn-submit btn-black">sign in</button>
-                        <p class="forgot-pass no-mgr-bottom text-white">Forgot password or username? <a class="btn-link btn-black" href="#">Click Here</a></p>
-                        <p class="forgot-pass no-mgr-top text-white">Don't have account yet? <a class="btn-link btn-black" href="#">Register</a></p>
+                        <p class="forgot-pass no-mgr-bottom text-white">Forgot password or username? <a class="btn-link btn-black" href="{{ route('member.forgot') }}">Click Here</a></p>
+                        <p class="forgot-pass no-mgr-top text-white">Don't have account yet? <a class="btn-link btn-black" href="{{ route('member.signup') }}">Sign Up</a></p>
                     </form>
                 </div>
             </div>

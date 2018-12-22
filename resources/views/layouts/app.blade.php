@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="/css/fonts.css">
 
     <link rel="stylesheet" href="/css/animate.css">
-    <!-- <link rel="stylesheet" href="{{asset('skins/flat/_all.css')}}"> -->
+    <link rel="stylesheet" href="{{asset('skins/flat/_all.css')}}">
     <link rel="stylesheet" href="/css/faq.css">
     <link rel="stylesheet" href="/css/style.css">
 

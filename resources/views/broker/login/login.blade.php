@@ -23,6 +23,7 @@
                         </div>
                         <button type="submit" class="btn btn-primary btn-block btn-submit btn-black">sign in</button>
                         <p class="forgot-pass no-mgr-bottom text-white">Forgot password or username? <a class="btn-link btn-black" href="{{ route('broker.forgot') }}">Click Here</a></p>
+                        <p class="forgot-pass no-mgr-top text-white">Don't have account yet? <a class="btn-link btn-black" href="{{ route('broker.signup') }}">Sign Up</a></p>
                     </form>
                 </div>
             </div>
